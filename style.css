@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .wrapper{
@@ -28,7 +29,6 @@
 }
 
 .logo{
-    
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -43,10 +43,22 @@
     font-size: 40px;
 }
 
+.nav-text-1:hover{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    text-decoration-line: underline;
+}
+
+.nav-text-1{
+    transition: 200ms;
+}
+
 .nav-text{
     display: flex;
     width: 30%;
     justify-content: space-between;
+    gap: 10px;
     font-size: 30px;
 }
 
@@ -65,7 +77,15 @@
     align-items: center;
     background-color: aliceblue;
     color: #000;
+    transition: 200ms;
 }
+
+
+.social:hover{
+    background-color: transparent;
+    font-size: 30px;
+}
+
 
 
 .main-section{
@@ -74,6 +94,7 @@
     display: flex;
     font-family: 'Lilita One';
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .main-text{
@@ -91,10 +112,6 @@
     height: 63%;
     background-image: url(Image/ice.png);
     background-size: cover;
-
-    
-
-
 }
 
 .main-img img{
@@ -146,3 +163,126 @@
     background-color: #000;
     border-radius: 20% 30%;
 }
+
+
+/* Extra Small Devices (phones) */
+@media only screen and (max-width: 600px) {
+    /* Your styles for extra small devices here */
+
+    .wrapper{
+    padding: 10px 10px 0 10px;
+
+    }
+    .nav-text{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+    .logo{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo-img img{
+        height: 30px;
+    }
+    
+    .logo-text{
+        font-size: 30px;
+    }
+    
+    .nav-social{
+        display: flex;
+        gap: 5px;
+        font-size: 15px;
+    }
+    
+    .social{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        color: #000;
+        transition: 200ms;
+    }
+
+    .main-section{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        font-family: 'Lilita One';
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .main-text{
+        width: 60%;
+        font-size: 60px;
+        color: #fff;
+        text-align: left;
+    }
+
+    .main-img{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 60%;
+        background-image: url(Image/ice.png);
+        background-size: cover;
+        overflow: hidden;
+        gap: 70px;
+    }
+    
+    .main-img img{
+        height: 280px;
+    }
+
+
+    .order{
+        font-family: 'Lilita One';
+        display: flex;
+        gap: 20px;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    #ordering{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+    .order i{
+        font-size: 20px;
+    }
+
+  }
+  
+  /* Small Devices (portrait tablets and large phones) */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Your styles for small devices here */
+  }
+  
+  /* Medium Devices (landscape tablets and small desktops) */
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    /* Your styles for medium devices here */
+  }
+  
+  /* Large Devices (laptops and desktops) */
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Your styles for large devices here */
+  }
+  
+  /* Extra Large Devices (large desktops) */
+  @media only screen and (min-width: 1201px) {
+    /* Your styles for extra large devices here */
+  }
+  
